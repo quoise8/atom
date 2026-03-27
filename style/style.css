@@ -1,0 +1,92 @@
+body { overflow: hidden; }
+
+.txt-1 { font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-weight: 600; }
+.txt-2 { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+}
+.alert { display: none; }
+
+@media only screen and (orientation : portrait) {
+    .main-container { display: none; }
+    .alert { display: block; }
+}
+
+.alert h1 {
+    position: relative; top: 40vh;
+    font-size: 5em; text-align: center;
+}
+.alert img {
+    position: relative; top: 42vh;
+    display: block; margin: auto;
+    width: 10vh;
+}
+
+.map-container  { height: 100vh; }
+
+.view-1, .view-2, .view-3 {
+    height: 100%;
+    object-fit: cover;
+}
+.pin-1, .pin-2 {
+    position: absolute;
+    width: 50px;
+    animation: appear-delayed 4s;
+}
+
+.pin-3, .pin-4, .pin-5, .pin-6 { position: absolute; width: 50px; }
+
+.info { position: relative; padding: 2em 1.8em 1.8em 1.8em; width: 100%; }
+.info h1 { font-size: 2.2em; color: #4848ea; margin-bottom: 0.6em; }
+
+@keyframes appear {
+    0% {
+        transform: translateY(25px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes appear-delayed {
+    0% {
+        transform: translateY(25px);
+        opacity: 0;
+    }
+    70% {
+        transform: translateY(25px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes dissappear {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-25px);
+        opacity: 0;
+    }
+}
+
+.appear { animation: appear 0.8s 0.8s forwards; }
+.appear-delayed { animation: appear-delayed 4s; }
+.dissappear { animation: dissappear 1s forwards; }
+
+.info h1 {
+    text-align: justify;
+    animation: appear 0.8s;
+}
+.info-1 { opacity: 1; }
+.info-2, .info-3, .info-4, .info-5 { opacity: 0; }
+
+.info-1, .info-2, .info-3, .info-4, .info-5 { position: absolute; text-align: justify; padding-right: 1.8em; }
+
+br { margin-bottom: 0.8em; }
