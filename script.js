@@ -87,3 +87,5 @@ pin6.addEventListener('click', () => {
     p5.classList.add('appear');
     np = 5;
 });
+
+window.location.reload();
