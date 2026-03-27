@@ -87,3 +87,11 @@ pin6.addEventListener('click', () => {
     p5.classList.add('appear');
     np = 5;
 });
+
+
+window.onload = function () {
+    if (!localStorage.justOnce) {
+        localStorage.setItem("justOnce", "true");
+        window.location.reload();
+    }
+}
